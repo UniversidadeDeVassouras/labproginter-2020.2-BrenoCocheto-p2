@@ -16,11 +16,13 @@ body{
 }
 
 #header{
+    z-index: 2;
     grid-area: header;
     background-color: black;
     display: grid;
     grid-template-areas: "logo" "button" "exit";
     grid-template-rows: auto auto auto;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #logo{
@@ -114,4 +116,80 @@ body{
   display: block;
   font-size: 16px;
   border-radius: 50%;
+}
+
+#home{
+    padding-left: 29px;
+    display: grid;
+    grid-template-areas: 
+    "title help side" 
+    "sub sub side"
+    "summary summary side"
+    "shortcuts shortcuts side" 
+    "select select side" 
+    "subjects subjects side";
+    grid-template-rows: 10vh 3vh 5vh 12vh 15vh 55vh;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+#h-title{
+    grid-area: title;
+    font-family: "Raleway";
+    src: url("../fonts/Raleway.ttf") format("ttf");
+    color: #FAFAFA;
+    font-size: 32px;
+}
+
+
+#h-sub{
+    grid-area: sub;
+     font-family: "Lato";
+    src: url("../fonts/Lato.ttf") format("ttf");
+    color: #FAFAFA;
+    font-size: 12px;
+}
+
+
+#h-help{
+    grid-area: help;
+}
+
+#h-summary{
+    grid-area: summary;
+    font-family: "Raleway";
+    src: url("../fonts/Raleway.ttf") format("ttf");
+    color: #FAFAFA;
+    font-size: 14px;
+    
+}
+#h-shortcuts{
+    grid-area: shortcuts;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+}
+
+#h-container{
+    margin: 10px;
+    border-radius: 25px;
+    background: #373A3D;
+    padding: 20px;
+    width: 200px;
+    height: 110px;
+}
+
+#h-select{
+    grid-area: select;
+}
+
+#h-subjects{
+    grid-area: subjects;
+}
+
+#h-side{
+    z-index: 3;
+    grid-area: side;
+    background-color: black;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
