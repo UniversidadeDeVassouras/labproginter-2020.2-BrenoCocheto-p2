@@ -1,38 +1,117 @@
-body {
-    background-color: #e1e1e1;
+body{
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-areas: "menu content";
+    grid-template-areas: "header content";
     grid-template-columns: 75px 1fr;
     grid-template-rows: 100vh;
 }
 
+:root{
+    --icolor: white;
+    --iheight: 20px;
+    --iwidth: 20px;
+    --imarginr: 18px;
+    --imargint: 45px;
+}
 
-#menu{
+#header{
+    grid-area: header;
     background-color: black;
-
+    display: grid;
+    grid-template-areas: "logo" "button" "exit";
+    grid-template-rows: auto auto auto;
 }
 
-#img{
-    height: 64px;
-    width: 57px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 18px;
-    background-image: url("../img/logo-universidade.png");
+#logo{
+    grid-area: logo;
     display: block;
-     background-color: #cccccc;
-
+    background: url('../img/logo.svg') no-repeat center center;
+    margin-top: 18px;
+    margin-left: 9px;
+    margin-right: 8px;
+    height: 75px;
+    width: 64px;
 }
 
-#i{
-    color: white;
-    font-size: 1.5em;
-    padding-top: 50px;
+#i-menu{
+    grid-area: button;
+    display: block;
+    background: url('../img/icons/menu.svg') no-repeat center center;
+    height: var(--iheight);
+    width: var(--iwidth);
+    margin-top: var(--imargint);
+    margin-right: var(--imarginr);
+}
+#i-trend{
+    grid-area: button;
+    display: block;
+    background: url('../img/icons/trend.svg') no-repeat center center;
+    height: var(--iheight);
+    width: var(--iwidth);
+    margin-top: var(--imargint);
+    margin-right: var(--imarginr);
+}
+#i-message{
+    grid-area: button;
+    display: block;
+    background: url('../img/icons/message.svg') no-repeat center center;
+    height: var(--iheight);
+    width: var(--iwidth);
+    margin-top: var(--imargint);
+    margin-right: var(--imarginr);
+}
+#i-file{
+    grid-area: button;
+    display: block;
+    background: url('../img/icons/file.svg') no-repeat center center;
+    height: var(--iheight);
+    width: var(--iwidth);
+    margin-top: var(--imargint);
+    margin-right: var(--imarginr);
+}
+#i-user{
+    grid-area: button;
+    display: block;
+    background: url('../img/icons/user.svg') no-repeat center center;
+    height: var(--iheight);
+    width: var(--iwidth);
+    margin-top: var(--imargint);
+    margin-right: var(--imarginr);
+}
+#i-settings{
+    grid-area: button;
+    display: block;
+    background: url('../img/icons/settings.svg') no-repeat center center;
+    height: var(--iheight);
+    width: var(--iwidth);
+    margin-top: var(--imargint);
+    margin-right: var(--imarginr);
+}
 
+#i-exit{
+    grid-area: button;
+    display: block;
+    background: url('../img/icons/log-out.svg') no-repeat center center;
+    height: var(--iheight);
+    width: var(--iwidth);
 }
 
 #content{
+    grid-area: content;
     background-color: #242526;
+}
+
+.circular-button {
+  background-color:#373A3D;
+  border: none;
+  padding: 15px;
+  margin-top: 121px;
+  margin-left: 14px;
+  margin-right: 14px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  border-radius: 50%;
 }
