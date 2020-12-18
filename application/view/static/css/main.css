@@ -36,7 +36,7 @@ body{
     display: grid;
     grid-template-areas: "logo" "button" "exit";
     grid-template-rows: auto auto auto;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #logo{
@@ -277,37 +277,119 @@ body{
 #h-subject-f{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
-    padding-top: 25px;
     padding-left: 29px;
 }
 
 #h-subject-card{
+    display: grid;
+    grid-template-areas: 
+    "title-subject title-subject" 
+    "prof-subject prof-subject" 
+    "name-subject name-subject"
+    "period-subject time-subject"
+    "number-subject hour-subject"
+    "line-subject line-subject"
+    "button-subject button-subject";
     background-color: #373A3D;
-    margin-top: 14px;
-    height: 110px;
-    width: 210px;
+    height: 200px;
+    width: 300px;
+    margin-top: 10px;
     border-radius: 12px;
     box-shadow: 3px 4px 7px 1px rgba(0, 0, 0, 0.43);
-    display: grid;
-    grid-template-areas: "title-s2" "content-s2";
-    grid-template-rows: 50% 50%;
 }
 
 #h-subject-card-title{
-    grid-area: title-s2;
-    margin-top: 28px;
+    margin-top: 23px;
+    margin-left: 19px;
+    grid-area: title-subject;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: bold;
+    color: #FAFAFA;
+}
+
+#h-subject-card-prof{
+    grid-area: prof-subject;
     margin-left: 29px;
+    margin-top: 10px;
     font-family: "Lato";
+    font-weight: lighter;
+    font-size: 12px;
+    color: #919498;
+}
+
+#h-subject-card-name{
+    grid-area: name-subject;
+    margin-left: 29px;
+    margin-top: 4px;
+    font-family: "Lato";
+    font-weight: lighter;
     font-size: 14px;
     color: #919498;
 }
 
-#h-subject-card-content{
-    grid-area: content-s2;
+#h-subject-card-period{
+    grid-area: period-subject;
     margin-left: 29px;
+    margin-top: 10px;
     font-family: "Lato";
-    font-weight: bold;
-    font-size: 32px;
-    color: #FAFAFA;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #919498;
+}
+
+#h-subject-card-time{
+    grid-area: time-subject;
+    margin-left: 29px;
+    margin-top: 10px;
+    font-family: "Lato";
+    font-weight: lighter;
+    font-size: 12px;
+    color: #919498;
+}
+
+#h-subject-card-number{
+    grid-area: number-subject;
+    margin-left: 29px;
+    margin-top: 10px;
+    font-family: "Lato";
+    font-weight: lighter;
+    font-size: 12px;
+    color: #919498;
+}
+
+#h-subject-card-hour{
+    grid-area: hour-subject;
+    margin-left: 29px;
+    margin-top: 10px;
+    font-family: "Lato";
+    font-weight: lighter;
+    font-size: 12px;
+    color: #919498;
+}
+
+#h-subject-card-line{
+    grid-area: line-subject;
+    margin-left: 9px;
+    border-top: 1px solid #FAFAFA;
+    width: 260px;
+}
+
+.h-subject-card-button {
+    grid-area: button-subject;
+    font-family: "Lato";
+    color: #781E20;
+    font-size: 14px;
+    margin-left: 20.5px;
+    margin-bottom: 14px;
+    border: 0em;
+    text-align: start;
+    text-decoration: none;
+    background: #373A3D;
+}
+
+.h-subject-card-button:hover {
+    text-decoration: none;
 }
