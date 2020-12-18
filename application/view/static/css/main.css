@@ -1,20 +1,34 @@
+/** base.html **/
+
 body{
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-areas: "header content";
-    grid-template-columns: 75px 1fr;
+    grid-template-areas: "header content side";
+    grid-template-columns: 75px 1fr 0.3fr;
     grid-template-rows: 100vh;
 }
-
+/** valores globais **/
 :root{
     --icolor: white;
     --iheight: 20px;
     --iwidth: 20px;
     --imarginr: 18px;
     --imargint: 45px;
+    
 }
 
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway.ttf') format("ttf");
+}
+
+/**código base.html**/
 #header{
     z-index: 2;
     grid-area: header;
@@ -104,6 +118,11 @@ body{
     background-color: #242526;
 }
 
+#side{
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .circular-button {
   background-color:#373A3D;
   border: none;
@@ -117,79 +136,178 @@ body{
   font-size: 16px;
   border-radius: 50%;
 }
+/** home.html **/
+/** título **/
 
-#home{
-    padding-left: 29px;
-    display: grid;
-    grid-template-areas: 
-    "title help side" 
-    "sub sub side"
-    "summary summary side"
-    "shortcuts shortcuts side" 
-    "select select side" 
-    "subjects subjects side";
-    grid-template-rows: 10vh 3vh 5vh 12vh 15vh 55vh;
-    grid-template-columns: 2fr 1fr 1fr;
+#h-section-title{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
 
 #h-title{
-    grid-area: title;
     font-family: "Raleway";
-    src: url("../fonts/Raleway.ttf") format("ttf");
     color: #FAFAFA;
-    font-size: 32px;
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 29px;
 }
 
+.button-help {
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   border-radius: 12px;
+   color: #FAFAFA;
+   font-family: "Lato";
+   font-weight: bolder;
+   font-size: 12px;
+   padding: 15px;
+   background-color: #781E20;
+   -webkit-box-shadow: 0 3px 8px 0 #000000;
+   -moz-box-shadow: 0 3px 8px 0 #000000;
+   box-shadow: 0 3px 8px 0 #000000;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+   margin-bottom: 15px;
+   margin-right: 28px;
+}
+
+/** subtitulo **/
+
+#h-sub-t{
+    display: flex;
+    flex-direction: row;
+    padding-left: 29px;
+}
 
 #h-sub{
-    grid-area: sub;
-     font-family: "Lato";
-    src: url("../fonts/Lato.ttf") format("ttf");
-    color: #FAFAFA;
+    font-family: "Lato";
     font-size: 12px;
-}
-
-
-#h-help{
-    grid-area: help;
-}
-
-#h-summary{
-    grid-area: summary;
-    font-family: "Raleway";
-    src: url("../fonts/Raleway.ttf") format("ttf");
     color: #FAFAFA;
-    font-size: 14px;
-    
 }
-#h-shortcuts{
-    grid-area: shortcuts;
+/** atalhos **/
+
+#h-shortcuts-f{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 28.5px;
+    padding-left: 29px;
+}
+
+#h-shortcuts-title{
+    padding-left: 35px;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 14px;
+    color: #FAFAFA;
+    padding-right: 100%;
+}
+
+#h-shortcuts-card{
+    background-color: #373A3D;
+    margin-top: 14px;
+    height: 110px;
+    width: 210px;
+    border-radius: 12px;
+    box-shadow: 3px 4px 7px 1px rgba(0, 0, 0, 0.43);
+    display: grid;
+    grid-template-areas: "title-s" "content-s";
+    grid-template-rows: 50% 50%;
+}
+
+#h-shortcuts-card-title{
+    grid-area: title-s;
+    margin-top: 28px;
+    margin-left: 29px;
+    font-family: "Lato";
+    font-size: 14px;
+    color: #919498;
+}
+
+#h-shortcuts-card-content{
+    grid-area: content-s;
+    margin-left: 29px;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 32px;
+    color: #FAFAFA;
+}
+/** navbar **/
+
+#h-selector{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: space-between;
 }
 
-#h-container{
-    margin: 10px;
-    border-radius: 25px;
-    background: #373A3D;
-    padding: 20px;
-    width: 200px;
+.midnav {
+  overflow: hidden;
+}
+
+.midnav a {
+  float: left;
+  display: block;
+  color: #FAFAFA;
+  text-align: center;
+  font-family: "Raleway";
+  font-weight: bolder;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: 10px;
+}
+
+.midnav a:hover {
+  border-bottom: 3px solid #781E20;
+}
+
+.midnav a.active {
+  border-bottom: 3px solid #781E20;
+}
+/** disciplinas **/
+
+#h-subject-f{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-left: 29px;
+}
+
+#h-subject-card{
+    background-color: #373A3D;
+    margin-top: 14px;
     height: 110px;
+    width: 210px;
+    border-radius: 12px;
+    box-shadow: 3px 4px 7px 1px rgba(0, 0, 0, 0.43);
+    display: grid;
+    grid-template-areas: "title-s2" "content-s2";
+    grid-template-rows: 50% 50%;
 }
 
-#h-select{
-    grid-area: select;
+#h-subject-card-title{
+    grid-area: title-s2;
+    margin-top: 28px;
+    margin-left: 29px;
+    font-family: "Lato";
+    font-size: 14px;
+    color: #919498;
 }
 
-#h-subjects{
-    grid-area: subjects;
-}
-
-#h-side{
-    z-index: 3;
-    grid-area: side;
-    background-color: black;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#h-subject-card-content{
+    grid-area: content-s2;
+    margin-left: 29px;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 32px;
+    color: #FAFAFA;
 }
