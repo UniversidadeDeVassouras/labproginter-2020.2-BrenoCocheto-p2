@@ -5,7 +5,7 @@ body{
     padding: 0px;
     display: grid;
     grid-template-areas: "header content side";
-    grid-template-columns: 75px 1fr 0.3fr;
+    grid-template-columns: 75px 1fr .3fr;
     grid-template-rows: 100vh;
 }
 /** valores globais **/
@@ -16,6 +16,19 @@ body{
     --imarginr: 18px;
     --imargint: 45px;
     
+}
+
+a:-webkit-any-link {
+    grid-area: button-subject;
+    font-family: "Lato";
+    color: #781E20;
+    font-size: 14px;
+    margin-left: 20.5px;
+    margin-bottom: 14px;
+    border: 0em;
+    text-align: start;
+    text-decoration: none;
+    background: #373A3D;
 }
 
 @font-face {
@@ -118,10 +131,7 @@ body{
     background-color: #242526;
 }
 
-#side{
-    background-color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 
 .circular-button {
   background-color:#373A3D;
@@ -136,8 +146,15 @@ body{
   font-size: 16px;
   border-radius: 50%;
 }
-/** home.html **/
-/** título **/
+/* side */
+
+#side{
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* home.html */
+/* título */
 
 #h-section-title{
     padding-top: 20px;
