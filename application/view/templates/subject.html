@@ -1,19 +1,29 @@
 {%extends 'base.html'%} {%block body%}
-<section id="s-section-title">
-    <a id="s-title">
+<section id="h-section-title">
+    <a id="h-title">
         Lab de Programação de Interface
     </a>
     <a class="button-help">Falar com o Professor</a>
 </section>
 <section id="h-sub-t">
     <a id="h-sub">Seja bem-vindo de volta, Breno Cocheto, sua última aula assistida foi: Aula 7 - Adobe XD
-        <link>(Você deseja retornar a aula?)</link>
+        <a id="s-sub">(Você deseja retornar a aula?)</a>
     </a>
 </section>
 <section id="h-selector">
     <div class="midnav">
         <a>Conteúdo</a>
         <a>Todo Conteúdo</a>
+    </div>
+</section>
+<section id="s-section-movie">
+    <div id="s-movie">
+        <div class="circular-button-white">
+            <a id="i-play"></a>
+        </div>
+        <div id="progressbar">
+            <div></div>
+        </div>
     </div>
 </section>
 {%endblock%}
